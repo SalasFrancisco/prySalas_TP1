@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace pryMiPrimerApp
 {
-    public partial class Form1 : Form
+    public partial class frmAlacena : Form
     {
-        public Form1()
+        public frmAlacena()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
