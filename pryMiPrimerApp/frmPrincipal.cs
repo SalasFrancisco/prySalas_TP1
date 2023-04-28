@@ -26,7 +26,7 @@ namespace pryMiPrimerApp
 
         private void cmdAdministradorDeGastos_Click(object sender, EventArgs e)
         {
-            Form1 ventanaControlDeGastosMensuales = new Form1();
+            frmGestionGastosMensuales ventanaControlDeGastosMensuales = new frmGestionGastosMensuales();
 
             ventanaControlDeGastosMensuales.ShowDialog();
         }
