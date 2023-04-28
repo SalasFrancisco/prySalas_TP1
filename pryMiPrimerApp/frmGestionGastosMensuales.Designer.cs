@@ -45,6 +45,7 @@
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.lblSaldoRestante = new System.Windows.Forms.Label();
+            this.lblSaldoRestante2 = new System.Windows.Forms.Label();
             this.mrcIngresos.SuspendLayout();
             this.mrcGastosFijos.SuspendLayout();
             this.mrcGastosVarios.SuspendLayout();
@@ -68,6 +69,8 @@
             this.txtDeposito.Name = "txtDeposito";
             this.txtDeposito.Size = new System.Drawing.Size(110, 26);
             this.txtDeposito.TabIndex = 1;
+            this.txtDeposito.Text = "0";
+            this.txtDeposito.TextChanged += new System.EventHandler(this.txtDeposito);
             // 
             // lblDeposito
             // 
@@ -101,6 +104,7 @@
             this.txtComida.Name = "txtComida";
             this.txtComida.Size = new System.Drawing.Size(110, 26);
             this.txtComida.TabIndex = 5;
+            this.txtComida.Text = "0";
             // 
             // lblComida
             // 
@@ -118,6 +122,7 @@
             this.txtImpuestos.Name = "txtImpuestos";
             this.txtImpuestos.Size = new System.Drawing.Size(110, 26);
             this.txtImpuestos.TabIndex = 3;
+            this.txtImpuestos.Text = "0";
             // 
             // lblImpuestos
             // 
@@ -135,6 +140,7 @@
             this.txtAlquiler.Name = "txtAlquiler";
             this.txtAlquiler.Size = new System.Drawing.Size(110, 26);
             this.txtAlquiler.TabIndex = 1;
+            this.txtAlquiler.Text = "0";
             // 
             // lblAlquiler
             // 
@@ -165,6 +171,7 @@
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(110, 26);
             this.txtMonto.TabIndex = 1;
+            this.txtMonto.Text = "0";
             // 
             // lblMonto
             // 
@@ -185,6 +192,7 @@
             this.cmdGuardar.TabIndex = 7;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.UseVisualStyleBackColor = true;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // cmdCancelar
             // 
@@ -194,6 +202,7 @@
             this.cmdCancelar.TabIndex = 8;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // lblSaldoRestante
             // 
@@ -201,15 +210,25 @@
             this.lblSaldoRestante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSaldoRestante.Location = new System.Drawing.Point(12, 386);
             this.lblSaldoRestante.Name = "lblSaldoRestante";
-            this.lblSaldoRestante.Size = new System.Drawing.Size(289, 20);
+            this.lblSaldoRestante.Size = new System.Drawing.Size(134, 20);
             this.lblSaldoRestante.TabIndex = 2;
-            this.lblSaldoRestante.Text = "Saldo Restante   ______________";
+            this.lblSaldoRestante.Text = "Saldo Restante";
+            // 
+            // lblSaldoRestante2
+            // 
+            this.lblSaldoRestante2.AutoSize = true;
+            this.lblSaldoRestante2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldoRestante2.Location = new System.Drawing.Point(152, 391);
+            this.lblSaldoRestante2.Name = "lblSaldoRestante2";
+            this.lblSaldoRestante2.Size = new System.Drawing.Size(0, 13);
+            this.lblSaldoRestante2.TabIndex = 9;
             // 
             // frmGestionGastosMensuales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(311, 463);
+            this.Controls.Add(this.lblSaldoRestante2);
             this.Controls.Add(this.lblSaldoRestante);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdGuardar);
@@ -219,6 +238,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionGastosMensuales";
             this.Text = "Gestion de Gastos Mensuales";
+            this.Load += new System.EventHandler(this.frmGestionGastosMensuales_Load);
             this.mrcIngresos.ResumeLayout(false);
             this.mrcIngresos.PerformLayout();
             this.mrcGastosFijos.ResumeLayout(false);
@@ -248,6 +268,7 @@
         private System.Windows.Forms.Button cmdGuardar;
         private System.Windows.Forms.Button cmdCancelar;
         private System.Windows.Forms.Label lblSaldoRestante;
+        private System.Windows.Forms.Label lblSaldoRestante2;
     }
 }
 

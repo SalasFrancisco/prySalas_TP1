@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.mrcAplicaciones = new System.Windows.Forms.GroupBox();
-            this.cmdAlacena = new System.Windows.Forms.Button();
             this.cmdAdministradorDeGastos = new System.Windows.Forms.Button();
+            this.cmdAlacena = new System.Windows.Forms.Button();
             this.mrcAplicaciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,17 +47,6 @@
             this.mrcAplicaciones.TabStop = false;
             this.mrcAplicaciones.Text = "Aplicaciones";
             // 
-            // cmdAlacena
-            // 
-            this.cmdAlacena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAlacena.Location = new System.Drawing.Point(22, 47);
-            this.cmdAlacena.Name = "cmdAlacena";
-            this.cmdAlacena.Size = new System.Drawing.Size(170, 88);
-            this.cmdAlacena.TabIndex = 0;
-            this.cmdAlacena.Text = "Alacena";
-            this.cmdAlacena.UseVisualStyleBackColor = true;
-            this.cmdAlacena.Click += new System.EventHandler(this.cmdAlacena_Click);
-            // 
             // cmdAdministradorDeGastos
             // 
             this.cmdAdministradorDeGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -68,14 +58,27 @@
             this.cmdAdministradorDeGastos.UseVisualStyleBackColor = true;
             this.cmdAdministradorDeGastos.Click += new System.EventHandler(this.cmdAdministradorDeGastos_Click);
             // 
+            // cmdAlacena
+            // 
+            this.cmdAlacena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAlacena.Location = new System.Drawing.Point(22, 47);
+            this.cmdAlacena.Name = "cmdAlacena";
+            this.cmdAlacena.Size = new System.Drawing.Size(170, 88);
+            this.cmdAlacena.TabIndex = 0;
+            this.cmdAlacena.Text = "Alacena";
+            this.cmdAlacena.UseVisualStyleBackColor = true;
+            this.cmdAlacena.Click += new System.EventHandler(this.cmdAlacena_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(245, 301);
             this.Controls.Add(this.mrcAplicaciones);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.Text = "Aplicaciones";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mrcAplicaciones.ResumeLayout(false);
             this.ResumeLayout(false);
 

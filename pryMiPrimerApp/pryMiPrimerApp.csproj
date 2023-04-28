@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>administracion-_1_.ico</ApplicationIcon>
+    <ApplicationIcon>3643769-building-home-house-main-menu-start_113416 %281%29.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmGestionGastosMensuales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmGestionGastosMensuales.Designer.cs">
+      <DependentUpon>frmGestionGastosMensuales.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAlacena.cs">
       <SubType>Form</SubType>
@@ -69,8 +69,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionGastosMensuales.resx">
+      <DependentUpon>frmGestionGastosMensuales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAlacena.resx">
       <DependentUpon>frmAlacena.cs</DependentUpon>
@@ -101,7 +101,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="3643769-building-home-house-main-menu-start_113416 %281%29.ico" />
     <Content Include="administracion-_1_.ico" />
+    <Content Include="png-transparent-computer-icons-icon-design-house-symbol-qualifications-wales-main-menu-angle-building-office.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

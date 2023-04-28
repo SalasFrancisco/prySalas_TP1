@@ -12,6 +12,8 @@ namespace pryMiPrimerApp
 {
     public partial class frmPrincipal : Form
     {
+        
+
         public frmPrincipal()
         {
             InitializeComponent();
@@ -29,6 +31,11 @@ namespace pryMiPrimerApp
             frmGestionGastosMensuales ventanaControlDeGastosMensuales = new frmGestionGastosMensuales();
 
             ventanaControlDeGastosMensuales.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
