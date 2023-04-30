@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionGastosMensuales));
             this.mrcIngresos = new System.Windows.Forms.GroupBox();
-            this.txtDeposito = new System.Windows.Forms.TextBox();
+            this.txtDepo = new System.Windows.Forms.TextBox();
             this.lblDeposito = new System.Windows.Forms.Label();
             this.mrcGastosFijos = new System.Windows.Forms.GroupBox();
             this.txtComida = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@
             // 
             // mrcIngresos
             // 
-            this.mrcIngresos.Controls.Add(this.txtDeposito);
+            this.mrcIngresos.Controls.Add(this.txtDepo);
             this.mrcIngresos.Controls.Add(this.lblDeposito);
             this.mrcIngresos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcIngresos.Location = new System.Drawing.Point(12, 12);
@@ -63,14 +63,15 @@
             this.mrcIngresos.TabStop = false;
             this.mrcIngresos.Text = "INGRESOS";
             // 
-            // txtDeposito
+            // txtDepo
             // 
-            this.txtDeposito.Location = new System.Drawing.Point(142, 34);
-            this.txtDeposito.Name = "txtDeposito";
-            this.txtDeposito.Size = new System.Drawing.Size(110, 26);
-            this.txtDeposito.TabIndex = 1;
-            this.txtDeposito.Text = "0";
-            this.txtDeposito.TextChanged += new System.EventHandler(this.txtDeposito);
+            this.txtDepo.Location = new System.Drawing.Point(142, 34);
+            this.txtDepo.Name = "txtDepo";
+            this.txtDepo.Size = new System.Drawing.Size(110, 26);
+            this.txtDepo.TabIndex = 2;
+            this.txtDepo.Text = "0";
+            this.txtDepo.TextChanged += new System.EventHandler(this.txtDepo_TextChanged);
+            this.txtDepo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDepo_KeyPress);
             // 
             // lblDeposito
             // 
@@ -105,6 +106,7 @@
             this.txtComida.Size = new System.Drawing.Size(110, 26);
             this.txtComida.TabIndex = 5;
             this.txtComida.Text = "0";
+            this.txtComida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtComida_KeyPress);
             // 
             // lblComida
             // 
@@ -123,6 +125,7 @@
             this.txtImpuestos.Size = new System.Drawing.Size(110, 26);
             this.txtImpuestos.TabIndex = 3;
             this.txtImpuestos.Text = "0";
+            this.txtImpuestos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImpuestos_KeyPress);
             // 
             // lblImpuestos
             // 
@@ -141,6 +144,8 @@
             this.txtAlquiler.Size = new System.Drawing.Size(110, 26);
             this.txtAlquiler.TabIndex = 1;
             this.txtAlquiler.Text = "0";
+            this.txtAlquiler.TextChanged += new System.EventHandler(this.txtAlquiler_TextChanged);
+            this.txtAlquiler.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlquiler_KeyPress);
             // 
             // lblAlquiler
             // 
@@ -172,6 +177,7 @@
             this.txtMonto.Size = new System.Drawing.Size(110, 26);
             this.txtMonto.TabIndex = 1;
             this.txtMonto.Text = "0";
+            this.txtMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMonto_KeyPress);
             // 
             // lblMonto
             // 
@@ -220,8 +226,9 @@
             this.lblSaldoRestante2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSaldoRestante2.Location = new System.Drawing.Point(152, 391);
             this.lblSaldoRestante2.Name = "lblSaldoRestante2";
-            this.lblSaldoRestante2.Size = new System.Drawing.Size(0, 13);
+            this.lblSaldoRestante2.Size = new System.Drawing.Size(126, 13);
             this.lblSaldoRestante2.TabIndex = 9;
+            this.lblSaldoRestante2.Text = "$________________";
             // 
             // frmGestionGastosMensuales
             // 
@@ -253,7 +260,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox mrcIngresos;
-        private System.Windows.Forms.TextBox txtDeposito;
         private System.Windows.Forms.Label lblDeposito;
         private System.Windows.Forms.GroupBox mrcGastosFijos;
         private System.Windows.Forms.TextBox txtAlquiler;
@@ -269,6 +275,7 @@
         private System.Windows.Forms.Button cmdCancelar;
         private System.Windows.Forms.Label lblSaldoRestante;
         private System.Windows.Forms.Label lblSaldoRestante2;
+        private System.Windows.Forms.TextBox txtDepo;
     }
 }
 

@@ -50,7 +50,7 @@
             // cmdAdministradorDeGastos
             // 
             this.cmdAdministradorDeGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAdministradorDeGastos.Location = new System.Drawing.Point(22, 153);
+            this.cmdAdministradorDeGastos.Location = new System.Drawing.Point(22, 36);
             this.cmdAdministradorDeGastos.Name = "cmdAdministradorDeGastos";
             this.cmdAdministradorDeGastos.Size = new System.Drawing.Size(170, 88);
             this.cmdAdministradorDeGastos.TabIndex = 1;
@@ -61,7 +61,7 @@
             // cmdAlacena
             // 
             this.cmdAlacena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAlacena.Location = new System.Drawing.Point(22, 47);
+            this.cmdAlacena.Location = new System.Drawing.Point(22, 156);
             this.cmdAlacena.Name = "cmdAlacena";
             this.cmdAlacena.Size = new System.Drawing.Size(170, 88);
             this.cmdAlacena.TabIndex = 0;

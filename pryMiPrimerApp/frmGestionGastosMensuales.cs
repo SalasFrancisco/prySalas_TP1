@@ -21,6 +21,56 @@ namespace pryMiPrimerApp
             Close();
         }
 
+        private void txtDepo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDepo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtAlquiler_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAlquiler_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtImpuestos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtComida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
         public frmGestionGastosMensuales()
         {
             InitializeComponent();
@@ -40,7 +90,7 @@ namespace pryMiPrimerApp
         {
             varAlquiler = Convert.ToDecimal(txtAlquiler.Text);
             varComida = Convert.ToDecimal(txtComida.Text);
-            varDeposito = Convert.ToDecimal(txtDeposito.Text);
+            varDeposito = Convert.ToDecimal(txtDepo.Text);
             varGastosVarios = Convert.ToDecimal(txtMonto.Text);
             varImpuesto = Convert.ToDecimal(txtImpuestos.Text);
             varSaldoRestante = varDeposito - varAlquiler - varComida - varGastosVarios - varImpuesto;
@@ -56,7 +106,7 @@ namespace pryMiPrimerApp
             varGastosVarios = 0;
             varImpuesto = 0;
             varSaldoRestante = 0;
-            lblSaldoRestante2.Text = "$_____________";
+            lblSaldoRestante2.Text = "$________________";
         }
     }
 }
