@@ -31,24 +31,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlacena));
             this.mrcControAlimentos = new System.Windows.Forms.GroupBox();
             this.mrcAlmacenado = new System.Windows.Forms.GroupBox();
-            this.lblCantidadAlmacenado2 = new System.Windows.Forms.Label();
-            this.lblCantidadAlmacenado = new System.Windows.Forms.Label();
-            this.lstAlimentoAlmacenado = new System.Windows.Forms.ComboBox();
+            this.cboAlimentoAlmacenado = new System.Windows.Forms.ComboBox();
             this.lblAlimentoAlmacenado = new System.Windows.Forms.Label();
-            this.lstLugarAlmacenado = new System.Windows.Forms.ComboBox();
+            this.cboLugarAlmacenado = new System.Windows.Forms.ComboBox();
             this.lblLugarAlmacenado = new System.Windows.Forms.Label();
             this.mrcAlmacenar = new System.Windows.Forms.GroupBox();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
-            this.lstCantidad = new System.Windows.Forms.ComboBox();
             this.lblCantidad = new System.Windows.Forms.Label();
-            this.lstAlimento = new System.Windows.Forms.ComboBox();
+            this.cboAlimento = new System.Windows.Forms.ComboBox();
             this.lblAlimento = new System.Windows.Forms.Label();
-            this.lstLugar = new System.Windows.Forms.ComboBox();
+            this.cboLugar = new System.Windows.Forms.ComboBox();
             this.lblLugar = new System.Windows.Forms.Label();
+            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
+            this.lblVencimiento = new System.Windows.Forms.Label();
+            this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaAlmacenado = new System.Windows.Forms.Label();
+            this.lblFechaAlmacenado2 = new System.Windows.Forms.Label();
+            this.lblCantidadAlmacenado = new System.Windows.Forms.Label();
+            this.lblCantidadAlmacenado2 = new System.Windows.Forms.Label();
             this.mrcControAlimentos.SuspendLayout();
             this.mrcAlmacenado.SuspendLayout();
             this.mrcAlmacenar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // mrcControAlimentos
@@ -58,7 +63,7 @@
             this.mrcControAlimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcControAlimentos.Location = new System.Drawing.Point(12, 12);
             this.mrcControAlimentos.Name = "mrcControAlimentos";
-            this.mrcControAlimentos.Size = new System.Drawing.Size(507, 345);
+            this.mrcControAlimentos.Size = new System.Drawing.Size(507, 408);
             this.mrcControAlimentos.TabIndex = 0;
             this.mrcControAlimentos.TabStop = false;
             this.mrcControAlimentos.Text = "Control de Alimentos";
@@ -67,63 +72,45 @@
             // 
             this.mrcAlmacenado.Controls.Add(this.lblCantidadAlmacenado2);
             this.mrcAlmacenado.Controls.Add(this.lblCantidadAlmacenado);
-            this.mrcAlmacenado.Controls.Add(this.lstAlimentoAlmacenado);
+            this.mrcAlmacenado.Controls.Add(this.lblFechaAlmacenado2);
+            this.mrcAlmacenado.Controls.Add(this.lblFechaAlmacenado);
+            this.mrcAlmacenado.Controls.Add(this.cboAlimentoAlmacenado);
             this.mrcAlmacenado.Controls.Add(this.lblAlimentoAlmacenado);
-            this.mrcAlmacenado.Controls.Add(this.lstLugarAlmacenado);
+            this.mrcAlmacenado.Controls.Add(this.cboLugarAlmacenado);
             this.mrcAlmacenado.Controls.Add(this.lblLugarAlmacenado);
             this.mrcAlmacenado.Location = new System.Drawing.Point(14, 222);
             this.mrcAlmacenado.Name = "mrcAlmacenado";
-            this.mrcAlmacenado.Size = new System.Drawing.Size(475, 112);
+            this.mrcAlmacenado.Size = new System.Drawing.Size(475, 169);
             this.mrcAlmacenado.TabIndex = 10;
             this.mrcAlmacenado.TabStop = false;
             this.mrcAlmacenado.Text = "Almacenado";
             // 
-            // lblCantidadAlmacenado2
+            // cboAlimentoAlmacenado
             // 
-            this.lblCantidadAlmacenado2.AutoSize = true;
-            this.lblCantidadAlmacenado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadAlmacenado2.Location = new System.Drawing.Point(297, 64);
-            this.lblCantidadAlmacenado2.Name = "lblCantidadAlmacenado2";
-            this.lblCantidadAlmacenado2.Size = new System.Drawing.Size(159, 20);
-            this.lblCantidadAlmacenado2.TabIndex = 6;
-            this.lblCantidadAlmacenado2.Text = "_______________";
-            this.lblCantidadAlmacenado2.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // lblCantidadAlmacenado
-            // 
-            this.lblCantidadAlmacenado.AutoSize = true;
-            this.lblCantidadAlmacenado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadAlmacenado.Location = new System.Drawing.Point(297, 33);
-            this.lblCantidadAlmacenado.Name = "lblCantidadAlmacenado";
-            this.lblCantidadAlmacenado.Size = new System.Drawing.Size(81, 20);
-            this.lblCantidadAlmacenado.TabIndex = 5;
-            this.lblCantidadAlmacenado.Text = "Cantidad";
-            // 
-            // lstAlimentoAlmacenado
-            // 
-            this.lstAlimentoAlmacenado.FormattingEnabled = true;
-            this.lstAlimentoAlmacenado.Location = new System.Drawing.Point(159, 56);
-            this.lstAlimentoAlmacenado.Name = "lstAlimentoAlmacenado";
-            this.lstAlimentoAlmacenado.Size = new System.Drawing.Size(121, 28);
-            this.lstAlimentoAlmacenado.TabIndex = 4;
+            this.cboAlimentoAlmacenado.FormattingEnabled = true;
+            this.cboAlimentoAlmacenado.Location = new System.Drawing.Point(202, 56);
+            this.cboAlimentoAlmacenado.Name = "cboAlimentoAlmacenado";
+            this.cboAlimentoAlmacenado.Size = new System.Drawing.Size(188, 28);
+            this.cboAlimentoAlmacenado.TabIndex = 4;
+            this.cboAlimentoAlmacenado.SelectedIndexChanged += new System.EventHandler(this.cboAlimentoAlmacenado_SelectedIndexChanged);
             // 
             // lblAlimentoAlmacenado
             // 
             this.lblAlimentoAlmacenado.AutoSize = true;
             this.lblAlimentoAlmacenado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlimentoAlmacenado.Location = new System.Drawing.Point(155, 33);
+            this.lblAlimentoAlmacenado.Location = new System.Drawing.Point(198, 33);
             this.lblAlimentoAlmacenado.Name = "lblAlimentoAlmacenado";
             this.lblAlimentoAlmacenado.Size = new System.Drawing.Size(79, 20);
             this.lblAlimentoAlmacenado.TabIndex = 3;
             this.lblAlimentoAlmacenado.Text = "Alimento";
             // 
-            // lstLugarAlmacenado
+            // cboLugarAlmacenado
             // 
-            this.lstLugarAlmacenado.FormattingEnabled = true;
-            this.lstLugarAlmacenado.Location = new System.Drawing.Point(21, 56);
-            this.lstLugarAlmacenado.Name = "lstLugarAlmacenado";
-            this.lstLugarAlmacenado.Size = new System.Drawing.Size(121, 28);
-            this.lstLugarAlmacenado.TabIndex = 2;
+            this.cboLugarAlmacenado.FormattingEnabled = true;
+            this.cboLugarAlmacenado.Location = new System.Drawing.Point(21, 56);
+            this.cboLugarAlmacenado.Name = "cboLugarAlmacenado";
+            this.cboLugarAlmacenado.Size = new System.Drawing.Size(175, 28);
+            this.cboLugarAlmacenado.TabIndex = 2;
             // 
             // lblLugarAlmacenado
             // 
@@ -137,13 +124,15 @@
             // 
             // mrcAlmacenar
             // 
+            this.mrcAlmacenar.Controls.Add(this.dtpVencimiento);
+            this.mrcAlmacenar.Controls.Add(this.lblVencimiento);
+            this.mrcAlmacenar.Controls.Add(this.nudCantidad);
             this.mrcAlmacenar.Controls.Add(this.cmdGuardar);
             this.mrcAlmacenar.Controls.Add(this.cmdCancelar);
-            this.mrcAlmacenar.Controls.Add(this.lstCantidad);
             this.mrcAlmacenar.Controls.Add(this.lblCantidad);
-            this.mrcAlmacenar.Controls.Add(this.lstAlimento);
+            this.mrcAlmacenar.Controls.Add(this.cboAlimento);
             this.mrcAlmacenar.Controls.Add(this.lblAlimento);
-            this.mrcAlmacenar.Controls.Add(this.lstLugar);
+            this.mrcAlmacenar.Controls.Add(this.cboLugar);
             this.mrcAlmacenar.Controls.Add(this.lblLugar);
             this.mrcAlmacenar.Location = new System.Drawing.Point(14, 37);
             this.mrcAlmacenar.Name = "mrcAlmacenar";
@@ -161,6 +150,7 @@
             this.cmdGuardar.TabIndex = 9;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.UseVisualStyleBackColor = true;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // cmdCancelar
             // 
@@ -171,50 +161,42 @@
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
             // 
-            // lstCantidad
-            // 
-            this.lstCantidad.FormattingEnabled = true;
-            this.lstCantidad.Location = new System.Drawing.Point(301, 56);
-            this.lstCantidad.Name = "lstCantidad";
-            this.lstCantidad.Size = new System.Drawing.Size(121, 28);
-            this.lstCantidad.TabIndex = 6;
-            // 
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(297, 33);
+            this.lblCantidad.Location = new System.Drawing.Point(388, 33);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(81, 20);
             this.lblCantidad.TabIndex = 5;
             this.lblCantidad.Text = "Cantidad";
             // 
-            // lstAlimento
+            // cboAlimento
             // 
-            this.lstAlimento.FormattingEnabled = true;
-            this.lstAlimento.Location = new System.Drawing.Point(159, 56);
-            this.lstAlimento.Name = "lstAlimento";
-            this.lstAlimento.Size = new System.Drawing.Size(121, 28);
-            this.lstAlimento.TabIndex = 4;
+            this.cboAlimento.FormattingEnabled = true;
+            this.cboAlimento.Location = new System.Drawing.Point(220, 56);
+            this.cboAlimento.Name = "cboAlimento";
+            this.cboAlimento.Size = new System.Drawing.Size(192, 28);
+            this.cboAlimento.TabIndex = 4;
             // 
             // lblAlimento
             // 
             this.lblAlimento.AutoSize = true;
             this.lblAlimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlimento.Location = new System.Drawing.Point(155, 33);
+            this.lblAlimento.Location = new System.Drawing.Point(216, 33);
             this.lblAlimento.Name = "lblAlimento";
             this.lblAlimento.Size = new System.Drawing.Size(79, 20);
             this.lblAlimento.TabIndex = 3;
             this.lblAlimento.Text = "Alimento";
             this.lblAlimento.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lstLugar
+            // cboLugar
             // 
-            this.lstLugar.FormattingEnabled = true;
-            this.lstLugar.Location = new System.Drawing.Point(21, 56);
-            this.lstLugar.Name = "lstLugar";
-            this.lstLugar.Size = new System.Drawing.Size(121, 28);
-            this.lstLugar.TabIndex = 2;
+            this.cboLugar.FormattingEnabled = true;
+            this.cboLugar.Location = new System.Drawing.Point(21, 56);
+            this.cboLugar.Name = "cboLugar";
+            this.cboLugar.Size = new System.Drawing.Size(193, 28);
+            this.cboLugar.TabIndex = 2;
             // 
             // lblLugar
             // 
@@ -226,20 +208,88 @@
             this.lblLugar.TabIndex = 1;
             this.lblLugar.Text = "Lugar";
             // 
+            // nudCantidad
+            // 
+            this.nudCantidad.Location = new System.Drawing.Point(418, 57);
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(51, 26);
+            this.nudCantidad.TabIndex = 10;
+            // 
+            // lblVencimiento
+            // 
+            this.lblVencimiento.AutoSize = true;
+            this.lblVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVencimiento.Location = new System.Drawing.Point(17, 96);
+            this.lblVencimiento.Name = "lblVencimiento";
+            this.lblVencimiento.Size = new System.Drawing.Size(188, 20);
+            this.lblVencimiento.TabIndex = 11;
+            this.lblVencimiento.Text = "Fecha de Vencimiento";
+            // 
+            // dtpVencimiento
+            // 
+            this.dtpVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpVencimiento.Location = new System.Drawing.Point(23, 120);
+            this.dtpVencimiento.Name = "dtpVencimiento";
+            this.dtpVencimiento.Size = new System.Drawing.Size(211, 18);
+            this.dtpVencimiento.TabIndex = 12;
+            // 
+            // lblFechaAlmacenado
+            // 
+            this.lblFechaAlmacenado.AutoSize = true;
+            this.lblFechaAlmacenado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaAlmacenado.Location = new System.Drawing.Point(17, 100);
+            this.lblFechaAlmacenado.Name = "lblFechaAlmacenado";
+            this.lblFechaAlmacenado.Size = new System.Drawing.Size(188, 20);
+            this.lblFechaAlmacenado.TabIndex = 12;
+            this.lblFechaAlmacenado.Text = "Fecha de Vencimiento";
+            // 
+            // lblFechaAlmacenado2
+            // 
+            this.lblFechaAlmacenado2.AutoSize = true;
+            this.lblFechaAlmacenado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaAlmacenado2.Location = new System.Drawing.Point(17, 132);
+            this.lblFechaAlmacenado2.Name = "lblFechaAlmacenado2";
+            this.lblFechaAlmacenado2.Size = new System.Drawing.Size(179, 20);
+            this.lblFechaAlmacenado2.TabIndex = 13;
+            this.lblFechaAlmacenado2.Text = "_________________";
+            // 
+            // lblCantidadAlmacenado
+            // 
+            this.lblCantidadAlmacenado.AutoSize = true;
+            this.lblCantidadAlmacenado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadAlmacenado.Location = new System.Drawing.Point(388, 33);
+            this.lblCantidadAlmacenado.Name = "lblCantidadAlmacenado";
+            this.lblCantidadAlmacenado.Size = new System.Drawing.Size(81, 20);
+            this.lblCantidadAlmacenado.TabIndex = 14;
+            this.lblCantidadAlmacenado.Text = "Cantidad";
+            // 
+            // lblCantidadAlmacenado2
+            // 
+            this.lblCantidadAlmacenado2.AutoSize = true;
+            this.lblCantidadAlmacenado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadAlmacenado2.Location = new System.Drawing.Point(396, 59);
+            this.lblCantidadAlmacenado2.Name = "lblCantidadAlmacenado2";
+            this.lblCantidadAlmacenado2.Size = new System.Drawing.Size(79, 20);
+            this.lblCantidadAlmacenado2.TabIndex = 15;
+            this.lblCantidadAlmacenado2.Text = "_______";
+            // 
             // frmAlacena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 368);
+            this.ClientSize = new System.Drawing.Size(531, 467);
             this.Controls.Add(this.mrcControAlimentos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAlacena";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestor de Alimentos";
+            this.Load += new System.EventHandler(this.frmAlacena_Load);
             this.mrcControAlimentos.ResumeLayout(false);
             this.mrcAlmacenado.ResumeLayout(false);
             this.mrcAlmacenado.PerformLayout();
             this.mrcAlmacenar.ResumeLayout(false);
             this.mrcAlmacenar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,20 +298,24 @@
 
         private System.Windows.Forms.GroupBox mrcControAlimentos;
         private System.Windows.Forms.Label lblAlimento;
-        private System.Windows.Forms.ComboBox lstLugar;
+        private System.Windows.Forms.ComboBox cboLugar;
         private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.GroupBox mrcAlmacenar;
         private System.Windows.Forms.GroupBox mrcAlmacenado;
-        private System.Windows.Forms.Label lblCantidadAlmacenado2;
-        private System.Windows.Forms.Label lblCantidadAlmacenado;
-        private System.Windows.Forms.ComboBox lstAlimentoAlmacenado;
+        private System.Windows.Forms.ComboBox cboAlimentoAlmacenado;
         private System.Windows.Forms.Label lblAlimentoAlmacenado;
-        private System.Windows.Forms.ComboBox lstLugarAlmacenado;
+        private System.Windows.Forms.ComboBox cboLugarAlmacenado;
         private System.Windows.Forms.Label lblLugarAlmacenado;
         private System.Windows.Forms.Button cmdGuardar;
         private System.Windows.Forms.Button cmdCancelar;
-        private System.Windows.Forms.ComboBox lstCantidad;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.ComboBox lstAlimento;
+        private System.Windows.Forms.ComboBox cboAlimento;
+        private System.Windows.Forms.NumericUpDown nudCantidad;
+        private System.Windows.Forms.Label lblVencimiento;
+        private System.Windows.Forms.DateTimePicker dtpVencimiento;
+        private System.Windows.Forms.Label lblFechaAlmacenado2;
+        private System.Windows.Forms.Label lblFechaAlmacenado;
+        private System.Windows.Forms.Label lblCantidadAlmacenado2;
+        private System.Windows.Forms.Label lblCantidadAlmacenado;
     }
 }

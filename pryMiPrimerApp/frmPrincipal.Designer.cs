@@ -77,6 +77,7 @@
             this.Controls.Add(this.mrcAplicaciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplicaciones";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mrcAplicaciones.ResumeLayout(false);

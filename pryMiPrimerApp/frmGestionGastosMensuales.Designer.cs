@@ -244,6 +244,7 @@
             this.Controls.Add(this.mrcIngresos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionGastosMensuales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Gastos Mensuales";
             this.Load += new System.EventHandler(this.frmGestionGastosMensuales_Load);
             this.mrcIngresos.ResumeLayout(false);
